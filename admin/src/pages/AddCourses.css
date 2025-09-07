@@ -310,11 +310,11 @@ form button[type="submit"]:focus {
 }
 
 @media (max-width: 1024px) {
-  .dashboard {
+  .dashboardAddCourse {
     margin-top: 20rem;
   }
-  .dashboard h1 {
-    margin-left: 25rem;
+  .dashboardAddCourse h1 {
+    margin-left: 26rem;
     font-size: 1.8rem;
   }
 
@@ -340,14 +340,14 @@ form button[type="submit"]:focus {
 }
 
 @media (max-width: 768px) {
-  .dashboard {
+  .dashboardAddCourse {
     margin-top: 25rem;
     margin-left: 8rem;
   }
 
-  .dashboard h1 {
+  .dashboardAddCourse h1 {
     font-size: 1.5rem;
-    margin-top: -40rem;
+    margin-top: -20rem;
     margin-left: 12rem;
   }
 
@@ -399,15 +399,15 @@ form button[type="submit"]:focus {
 }
 
 @media (max-width: 480px) {
-  .dashboard {
-    margin-top: 35rem;
-    margin-left: 8rem;
+  .dashboardAddCourse {
+    margin-top: 55rem;
+
     width: 100%;
   }
 
-  .dashboard h1 {
+  .dashboardAddCourse h1 {
     font-size: 1.3rem;
-    margin-top: -61rem;
+    margin-top: 41rem;
     margin-left: -5rem;
   }
 
@@ -423,7 +423,6 @@ form button[type="submit"]:focus {
   }
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -431,27 +430,26 @@ form button[type="submit"]:focus {
   background-color: #f8f8ff;
 }
 
-.dashboard {
+.dashboardAddCourse {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: auto;
   background-color: transparent;
-  margin-top: -15rem;
-  /* margin-left: 25rem; */
+  margin-top: 23rem;
 }
 
-.dashboard h1 {
+.dashboardAddCourse h1 {
   text-align: center;
-  /* margin-left: 33rem; */
+  margin-left: 33rem;
   margin-right: 15rem;
-  margin-top: -5rem;
+  margin-top: -40rem;
   background-color: transparent;
-  color: #058ad2; /* EduSphere Blue */
+  color: #058ad2;
   font-size: 2rem;
   font-variant: small-caps;
   text-decoration-line: underline;
-  text-decoration-color: #f97316; /* EduSphere Orange */
+  text-decoration-color: #f97316;
   text-decoration-thickness: 0.125rem;
   text-underline-offset: 0.5rem;
 }
@@ -459,8 +457,8 @@ form button[type="submit"]:focus {
 form {
   max-width: 600px;
   margin: 0 auto 3rem auto;
-  /* margin-left: 22rem; */
-  /* margin-right: 22rem; */
+  margin-left: 22rem;
+
   background: #ffffff;
   border-radius: 0.75rem;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
@@ -469,7 +467,7 @@ form {
   flex-direction: column;
   gap: 1.5rem;
   margin-top: -17rem;
-  border: 1px solid #e0f2f1; /* Teal border hint */
+  border: 1px solid #e0f2f1;
 }
 
 form label {
@@ -503,7 +501,7 @@ select:focus,
 textarea:focus,
 input[type="file"]:focus {
   outline: none;
-  border-color: #14b8a6; /* EduSphere Teal */
+  border-color: #14b8a6;
   background-color: #ffffff;
   box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.3);
 }
@@ -514,7 +512,7 @@ form button[type="submit"] {
   font-size: 1.125rem;
   font-weight: 700;
   color: #ffffff;
-  background: linear-gradient(144deg, #058ad2, #14b8a6 50%, #f97316); /* EduSphere gradient */
+  background: linear-gradient(144deg, #058ad2, #14b8a6 50%, #f97316);
   border: none;
   border-radius: 0.75rem;
   cursor: pointer;
@@ -525,11 +523,11 @@ form button[type="submit"] {
 form button[type="submit"]:hover,
 form button[type="submit"]:focus {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(249, 115, 22, 0.4); /* Orange glow */
+  box-shadow: 0 6px 14px rgba(249, 115, 22, 0.4);
 }
 
 .notification-item.success {
-  border: 1px solid #14b8a6; /* Teal */
+  border: 1px solid #14b8a6;
 }
 
 .notification-item.success .notification-icon svg {
@@ -550,4 +548,98 @@ form button[type="submit"]:focus {
 
 .notification-item.error .notification-progress-bar {
   background-color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .dashboardAddCourse {
+    margin-top: 4rem;
+    padding: 0 1rem;
+    align-items: center;
+  }
+
+  .dashboardAddCourse h1 {
+    font-size: 1.6rem;
+    margin: 0 auto 1rem auto;
+    margin-left: -2rem;
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-left: 1rem;
+    padding: 1.5rem;
+  }
+
+  .rowTwoColumns {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-input-container {
+    width: 120px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardAddCourse {
+    width: 80%;
+    margin-top: 4rem;
+    padding: 0 0.5rem;
+  }
+
+  .dashboardAddCourse h1 {
+    font-size: 1.3rem;
+    margin: 0 auto 1.5rem auto;
+    margin-left: -1.5rem;
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 1.5rem;
+    padding: 1rem;
+  }
+
+  form label {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="url"],
+  select,
+  textarea,
+  input[type="file"] {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  textarea {
+    min-height: 5rem;
+  }
+
+  .image-input-container {
+    width: 100px;
+    height: 70px;
+  }
+
+  .placeholder-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .upload-icon {
+    width: 18px;
+    height: 18px;
+    bottom: 3px;
+    right: 3px;
+  }
+
+  form button[type="submit"] {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
 }

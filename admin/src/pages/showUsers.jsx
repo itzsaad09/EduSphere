@@ -44,7 +44,7 @@ function ShowUsers({ setToken }) {
   return (
     <>
       <Sidebar setToken={setToken} />
-      <div className="dashboard">
+      <div className="dashboardShowUsers">
         <h1>View Users</h1>
       </div>
       <div className="user-list">
@@ -57,37 +57,6 @@ function ShowUsers({ setToken }) {
               <b>Email: </b>
               {user.email}
             </p>
-            <p>
-              <b>Shipping Details:</b>
-            </p>
-
-            {user.shippingDetails && user.shippingDetails.length > 0 ? (
-              user.shippingDetails.map((detail, index) => (
-                <div key={`${user._id}-shipping-${detail._id || index}`} className="shipping-address-item">
-                  <p>
-                    <b>Address {index + 1}:</b>
-                  </p>
-                  <p>
-                    <b>Name: </b>
-                    {detail.fullName || 'N/A'}
-                  </p>
-                  <p>
-                    <b>Phone Number: </b>
-                    {detail.phoneNumber || 'N/A'}
-                  </p>
-                  <p>
-                    {detail.addressLine1 || 'N/A'}
-                    {detail.addressLine2 && `, ${detail.addressLine2}`}
-                    , {detail.city || 'N/A'}
-                    , {detail.stateProvince || 'N/A'}
-                    , {detail.country || 'N/A'}
-                    , {detail.postalCode || 'N/A'}
-                  </p>
-                </div>
-              ))
-            ) : (
-              <p className="no-shipping-details">No shipping details available.</p>
-            )}
           </div>
         ))}
       </div>

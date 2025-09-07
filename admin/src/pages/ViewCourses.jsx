@@ -90,7 +90,7 @@ function ViewCourses({ setToken, token }) {
     <>
       <Sidebar setToken={setToken} />
       <div className="main-content">
-        <div className="dashboard">
+        <div className="dashboardViewCourse">
           <h1>View Courses</h1>
         </div>
         <div className="course-list">

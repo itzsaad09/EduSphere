@@ -65,7 +65,7 @@ function AddCourses({ setToken, token }) {
   return (
     <>
       <Sidebar setToken={setToken} />
-      <div className="dashboard">
+      <div className="dashboardAddCourse">
         <h1>Add Courses</h1>
       </div>
       <form method="post" onSubmit={onSubmit}>
