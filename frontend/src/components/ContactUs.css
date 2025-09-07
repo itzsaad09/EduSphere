@@ -1,0 +1,209 @@
+.contactus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.contactus-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease;
+}
+
+.contactus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#contactus-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: normal;
+  text-shadow: none;
+}
+
+.contactus-subheading {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contactus-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactus-field {
+  position: relative;
+  width: 100%;
+}
+
+.contactus-input-field,
+.contactus-textarea-field {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  color: #374151;
+  transition: all 0.3s ease;
+  background-color: #f9fafb;
+  resize: vertical;
+  min-height: 4rem;
+}
+
+.contactus-input-field:focus,
+.contactus-textarea-field:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+  transform: none;
+}
+
+.contactus-input-icon {
+  position: absolute;
+  left: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.contactus-field.textarea .contactus-input-icon {
+  top: 1rem;
+  transform: translateY(0);
+}
+
+.contactus-input-field:focus + .contactus-input-icon,
+.contactus-input-field:not(:placeholder-shown) + .contactus-input-icon,
+.contactus-textarea-field:focus + .contactus-input-icon,
+.contactus-textarea-field:not(:placeholder-shown) + .contactus-input-icon {
+  color: #4f46e5;
+}
+
+.contactus-message {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: normal;
+  border: none;
+}
+
+.contactus-message.success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.contactus-message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.contactus-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contactus-button1 {
+  width: 100%;
+  padding: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: none;
+  background-color: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+
+.contactus-button1:hover {
+  background-color: #4338ca;
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
+  transform: none;
+}
+
+.contactus-button1:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+@media (max-width: 640px) {
+  .contactus-card {
+    padding: 2rem 1.5rem;
+    border-radius: 1.25rem;
+    margin: 0 1rem;
+  }
+
+  #contactus-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contactus-subheading {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactus-input-field,
+  .contactus-textarea-field {
+    padding: 0.8rem 1rem 0.8rem 3rem;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .contactus-input-icon {
+    left: 1rem;
+    font-size: 1rem;
+  }
+
+  .contactus-field.textarea .contactus-input-icon {
+    top: 0.8rem;
+  }
+
+  .contactus-button1 {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    border-radius: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactus-card {
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  #contactus-heading {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactus-subheading {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+}

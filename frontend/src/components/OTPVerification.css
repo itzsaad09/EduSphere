@@ -1,0 +1,202 @@
+.otpverification-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s ease-in-out;
+}
+
+.otpverification-card {
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  padding: 3rem 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.3s ease;
+}
+
+.otpverification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+#otpverification-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: normal;
+  text-shadow: none;
+}
+
+.otpverification-subheading {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.otpverification-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.otpverification-input-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.otpverification-input-field {
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  color: #374151;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.otpverification-input-field:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+}
+
+.otpverification-message {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: normal;
+  border: none;
+}
+
+.otpverification-message.success {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.otpverification-message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.otpverification-button1,
+.otpverification-button2 {
+  width: 100%;
+  padding: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: none;
+}
+
+.otpverification-button1 {
+  background-color: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+
+.otpverification-button1:hover {
+  background-color: #4338ca;
+  box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
+  transform: none;
+}
+
+.otpverification-button1:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.otpverification-button2 {
+  background-color: transparent;
+  color: #4f46e5;
+  border: 1px solid #4f46e5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.otpverification-button2:hover {
+  background-color: #4f46e5;
+  color: #ffffff;
+  transform: none;
+  box-shadow: none;
+}
+
+.otpverification-button2:disabled {
+  background-color: transparent;
+  color: #9ca3af;
+  border-color: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+@media (max-width: 640px) {
+  .otpverification-card {
+    padding: 2rem 1.5rem;
+    border-radius: 1.25rem;
+    margin: 0 1rem;
+  }
+
+  #otpverification-heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .otpverification-input-container {
+    gap: 0.5rem;
+  }
+
+  .otpverification-input-field {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .otpverification-card {
+    padding: 1.5rem 1rem;
+    border-radius: 0.75rem;
+  }
+
+  #otpverification-heading {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .otpverification-input-container {
+    gap: 0.4rem;
+  }
+
+  .otpverification-input-field {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.1rem;
+    border-radius: 0.75rem;
+  }
+
+  .otpverification-button1,
+  .otpverification-button2 {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    border-radius: 0.75rem;
+  }
+}

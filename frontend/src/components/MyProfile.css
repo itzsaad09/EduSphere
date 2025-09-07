@@ -1,0 +1,311 @@
+.profile-completion-page-container {
+  padding-top: 1rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 3rem;
+  background-color: #f3f4f6;
+  min-height: calc(100vh - 8rem);
+}
+
+.profile-form-section {
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1e40af;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-form {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 3rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  color: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.2);
+}
+
+.file-upload-group {
+  position: relative;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background-color: #e0f2fe;
+  color: #1d4ed8;
+  border: 2px dashed #93c5fd;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  gap: 0.5rem;
+}
+
+.file-input-label:hover {
+  background-color: #bfdbfe;
+  border-color: #60a5fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.file-input-label .upload-icon {
+  font-size: 1.2rem;
+  color: #1d4ed8;
+}
+
+.image-preview {
+  margin-top: 1rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f9fafb;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.3rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-message {
+  font-size: 0.95rem;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-message.success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #34d399;
+}
+
+.form-message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+.submit-profile-btn {
+  background-color: #f97316;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.8rem 2.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 2rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.submit-profile-btn:hover:not(:disabled) {
+  background-color: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.4);
+}
+
+.submit-profile-btn:disabled {
+  background-color: #fed7aa;
+  cursor: not-allowed;
+  opacity: 0.8;
+  box-shadow: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-completion-page-container {
+    padding-top: 4rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .profile-form-section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.875rem;
+    margin-bottom: 0.6rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  .form-input {
+    padding: 0.7rem 0.8rem 0.7rem 2.5rem;
+    font-size: 0.9rem;
+  }
+  .input-icon {
+    left: 0.8rem;
+    font-size: 1rem;
+  }
+  .file-input-label {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+  .file-input-label .upload-icon {
+    font-size: 1rem;
+  }
+  .submit-profile-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-form-section {
+    padding: 2.5rem 1.5rem;
+  }
+  .submit-profile-btn {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  .profile-form-section {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .profile-completion-page-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .profile-form-section {
+    padding: 4rem 3rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .submit-profile-btn {
+    max-width: 280px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .profile-completion-page-container {
+    max-width: 1400px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

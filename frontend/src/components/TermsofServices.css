@@ -1,0 +1,188 @@
+/* Page Container */
+.terms-of-service-page-container {
+    padding-top: 5rem; /* Space for fixed header */
+    max-width: 900px; /* Max width for readability of long text */
+    margin: 0 auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 3rem;
+    background-color: #f8fafc; /* Very light background for document feel */
+}
+
+/* Section Styling */
+.terms-of-service-section {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    padding: 2.5rem;
+    line-height: 1.8; /* Improved readability for body text */
+    color: #374151; /* Dark gray text */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 0.8s ease-out forwards; /* Fade in animation */
+    animation-delay: 0.2s; /* Slight delay */
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #1d4ed8; /* Strong blue for main title */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.last-updated {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+}
+
+/* Headings within the terms content */
+.terms-of-service-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e40af; /* Slightly lighter blue for subheadings */
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0e7ff; /* Subtle underline */
+}
+
+.terms-of-service-section h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2563eb; /* Even lighter blue */
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+/* Paragraphs */
+.terms-of-service-section p {
+    margin-bottom: 1rem;
+}
+
+/* Lists */
+.terms-of-service-section ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0;
+}
+
+.terms-of-service-section ul ul { /* Nested lists */
+    list-style-type: circle;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.terms-of-service-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Links within the policy text */
+.policy-link {
+    color: #f97316; /* Orange for links */
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.policy-link:hover {
+    color: #ea580c; /* Darker orange on hover */
+}
+
+/* Keyframe for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======== BREAKPOINTS (Responsive Adjustments) ======== */
+
+/* Small phones */
+@media (max-width: 480px) {
+    .terms-of-service-page-container {
+        padding-top: 0.5rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    .terms-of-service-section {
+        padding: 1.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .last-updated {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
+    }
+    .terms-of-service-section h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+    }
+    .terms-of-service-section h3 {
+        font-size: 1.1rem;
+        margin-top: 1.2rem;
+        margin-bottom: 0.6rem;
+    }
+    .terms-of-service-section p,
+    .terms-of-service-section li {
+        font-size: 0.9rem;
+    }
+    .terms-of-service-section ul {
+        margin-left: 1rem;
+    }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 640px) {
+    .terms-of-service-page-container {
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .terms-of-service-section {
+        padding: 2rem;
+    }
+    .section-title {
+        font-size: 2.4rem;
+    }
+    .terms-of-service-section h2 {
+        font-size: 1.6rem;
+    }
+    .terms-of-service-section h3 {
+        font-size: 1.2rem;
+    }
+    .terms-of-service-section p,
+    .terms-of-service-section li {
+        font-size: 0.95rem;
+    }
+}
+
+/* Standard Desktops (1024px and up) */
+@media (min-width: 1024px) {
+    .terms-of-service-page-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    .terms-of-service-section {
+        padding: 3rem;
+    }
+    .section-title {
+        font-size: 3rem;
+    }
+    .terms-of-service-section h2 {
+        font-size: 2rem;
+    }
+    .terms-of-service-section h3 {
+        font-size: 1.4rem;
+    }
+}

@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f8ff;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  background-color: #f8f8ff;
+  margin-top: 20rem;
+}
+
+.dashboard h1 {
+  text-align: center;
+  margin-left: 33rem;
+  margin-top: -38rem;
+  background-color: transparent;
+  color: #058ad2;
+  font-size: 2rem;
+  font-variant: small-caps;
+  text-decoration-line: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.5rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  margin-left: 35rem;
+  background: #e8e8e8;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: -17rem;
+}
+
+.rowTwoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
+  width: 100%;
+}
+
+form label {
+  display: block;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  background-color: transparent;
+}
+
+div {
+  background-color: transparent;
+}
+
+input[type="text"],
+input[type="url"],
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  color: #111827;
+  border: 1.5px solid #d1d5db;
+  border-radius: 0.75rem;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus,
+input[type="file"]:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 0.3);
+}
+
+textarea {
+  resize: none;
+  min-height: 6rem;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.image > label {
+  background-color: transparent;
+  display: block;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.image-inputs-row {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.image-input-container {
+  position: relative;
+  flex-shrink: 0;
+  width: 150px;
+  height: 100px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.image-input-container label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.image-input-container .uploaded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.image-input-container input[type="file"] {
+  display: none;
+}
+
+.upload-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  color: #555;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 3px;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.placeholder-icon {
+  width: 50px;
+  height: 50px;
+  color: #a1a1aa;
+  z-index: 0;
+}
+
+.image-input-container .uploaded-image + input[type="file"] + .upload-icon {
+  display: block;
+}
+
+.image-input-container input[type="file"]:not([value=""]) + .placeholder-icon {
+  display: none;
+}
+
+form button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #058ad2;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  position: relative;
+  bottom: 0.188;
+  background: linear-gradient(144deg, #9706ff, #2f0fff 50%, #18f0ff);
+  cursor: pointer;
+}
+
+.notifications {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+}
+
+.notification-item {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 300px;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.notification-icon {
+  flex-shrink: 0;
+  background-color: transparent;
+}
+
+.notification-icon svg {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+}
+
+.notification-text {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #374151;
+  background-color: transparent;
+}
+
+.notification-close {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+}
+
+.notification-close:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.notification-item.success {
+  border: 1px solid #10b981;
+}
+
+.notification-item.success .notification-icon svg {
+  color: #10b981;
+}
+
+.notification-item.success .notification-progress-bar {
+  background-color: #10b981;
+}
+
+.notification-item.error {
+  border: 1px solid #ef4444;
+}
+
+.notification-item.error .notification-icon svg {
+  color: #ef4444;
+}
+
+.notification-item.error .notification-progress-bar {
+  background-color: #ef4444;
+}
+
+.notification-progress-bar {
+  height: 4px;
+  width: 100%;
+  margin-top: 0.75rem;
+  background-color: #ccc;
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dashboard {
+    margin-top: 20rem;
+  }
+  .dashboard h1 {
+    margin-left: 25rem;
+    font-size: 1.8rem;
+  }
+
+  form {
+    margin-left: 25.5rem;
+    margin-right: auto;
+    max-width: 500px;
+    padding: 1.5rem 2rem;
+  }
+
+  .rowTwoColumns {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .image-inputs-row {
+    justify-content: center;
+  }
+
+  .image label:not([for="image"]) {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    margin-top: 25rem;
+    margin-left: 8rem;
+  }
+
+  .dashboard h1 {
+    font-size: 1.5rem;
+    margin-top: -40rem;
+    margin-left: 12rem;
+  }
+
+  form {
+    padding: 1.5rem 1.25rem;
+    margin-top: -18rem;
+    margin-left: 9rem;
+    width: 150%;
+  }
+
+  form label {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="url"],
+  select,
+  textarea,
+  input[type="file"] {
+    padding: 0.5rem 0.625rem;
+    font-size: 0.9rem;
+  }
+
+  textarea {
+    min-height: 5rem;
+  }
+
+  .image-input-container {
+    width: 120px;
+    height: 80px;
+  }
+
+  .placeholder-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .upload-icon {
+    width: 20px;
+    height: 20px;
+    bottom: 3px;
+    right: 3px;
+  }
+
+  form button[type="submit"] {
+    padding: 0.625rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    margin-top: 35rem;
+    margin-left: 8rem;
+    width: 100%;
+  }
+
+  .dashboard h1 {
+    font-size: 1.3rem;
+    margin-top: -61rem;
+    margin-left: -5rem;
+  }
+
+  form {
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-top: -29rem;
+    margin-left: 1.2rem;
+  }
+
+  form label {
+    font-size: 0.9rem;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f8ff;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  background-color: transparent;
+  margin-top: -15rem;
+  /* margin-left: 25rem; */
+}
+
+.dashboard h1 {
+  text-align: center;
+  /* margin-left: 33rem; */
+  margin-right: 15rem;
+  margin-top: -5rem;
+  background-color: transparent;
+  color: #058ad2; /* EduSphere Blue */
+  font-size: 2rem;
+  font-variant: small-caps;
+  text-decoration-line: underline;
+  text-decoration-color: #f97316; /* EduSphere Orange */
+  text-decoration-thickness: 0.125rem;
+  text-underline-offset: 0.5rem;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  /* margin-left: 22rem; */
+  /* margin-right: 22rem; */
+  background: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.05);
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: -17rem;
+  border: 1px solid #e0f2f1; /* Teal border hint */
+}
+
+form label {
+  display: block;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: #374151;
+  background-color: transparent;
+}
+
+input[type="text"],
+input[type="url"],
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font-size: 1rem;
+  color: #111827;
+  border: 1.5px solid #d1d5db;
+  border-radius: 0.75rem;
+  background-color: #f9fafb;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus,
+select:focus,
+textarea:focus,
+input[type="file"]:focus {
+  outline: none;
+  border-color: #14b8a6; /* EduSphere Teal */
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.3);
+}
+
+form button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(144deg, #058ad2, #14b8a6 50%, #f97316); /* EduSphere gradient */
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(249, 115, 22, 0.4); /* Orange glow */
+}
+
+.notification-item.success {
+  border: 1px solid #14b8a6; /* Teal */
+}
+
+.notification-item.success .notification-icon svg {
+  color: #14b8a6;
+}
+
+.notification-item.success .notification-progress-bar {
+  background-color: #14b8a6;
+}
+
+.notification-item.error {
+  border: 1px solid #ef4444;
+}
+
+.notification-item.error .notification-icon svg {
+  color: #ef4444;
+}
+
+.notification-item.error .notification-progress-bar {
+  background-color: #ef4444;
+}

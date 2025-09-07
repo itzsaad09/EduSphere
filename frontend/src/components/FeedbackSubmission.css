@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.feedback-form-wrapper {
+  padding: 6rem 1rem 3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #f3f4f6;
+  min-height: calc(100vh - 100px);
+}
+
+.feedback-section {
+  padding: 3rem 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 1rem;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin: 0 auto 2.5rem;
+  max-width: 700px;
+}
+
+.feedback-submission-form {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-field {
+  margin-bottom: 1.5rem;
+}
+
+.form-field label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 0.5rem;
+}
+
+.form-text-input,
+.form-textarea-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  /* color: #374151; */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-text-input:focus,
+.form-textarea-input:focus {
+  outline: none;
+  border-color: #14b8a6;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+.form-textarea-input {
+  resize: vertical;
+}
+
+.rating-stars-wrapper {
+  font-size: 1.8rem;
+  color: #d1d5db;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+}
+
+.rating-star {
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+  margin-right: 0.2rem;
+}
+
+.rating-star.selected {
+  color: #f97316;
+}
+
+.rating-star:hover {
+  transform: scale(1.1);
+  color: #f97316;
+}
+.rating-star:hover ~ .rating-star {
+  color: #d1d5db;
+}
+
+.submit-button {
+  background-color: #f97316;
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.5rem 3.7rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(249, 115, 22, 0.3);
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #ea580c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(249, 115, 22, 0.4);
+  outline: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 1281px) {
+  .feedback-form-wrapper {
+    max-width: 1400px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1280px) {
+  .feedback-form-wrapper {
+    padding: 4rem 1.5rem 2.5rem;
+  }
+  .feedback-section {
+    padding: 2.5rem 1.5rem;
+  }
+  .section-header {
+    font-size: 2.25rem;
+  }
+  .section-description {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .feedback-form-wrapper {
+    padding: 0.5rem 1rem 2rem;
+  }
+  .feedback-section {
+    padding: 2rem 1rem;
+  }
+  .section-header {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  .section-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .form-field label {
+    font-size: 0.95rem;
+  }
+  .form-text-input,
+  .form-textarea-input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  .rating-stars-wrapper {
+    font-size: 1.6rem;
+  }
+  .submit-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-form-wrapper {
+    padding: 0.5rem 0.75rem 1.5rem;
+  }
+  .feedback-section {
+    padding: 1.5rem 0.75rem;
+  }
+  .section-header {
+    font-size: 1.75rem;
+  }
+  .section-description {
+    font-size: 0.9rem;
+  }
+  .form-field label {
+    font-size: 0.85rem;
+  }
+  .form-text-input,
+  .form-textarea-input {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+  .rating-stars-wrapper {
+    font-size: 1.4rem;
+  }
+  .submit-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    max-width: 180px;
+  }
+}
