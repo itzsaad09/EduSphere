@@ -1,5 +1,6 @@
 import transporter from "./emailConfig.js";
 import { emailTemplate, welcomeEmailTemplate } from "./emailTemplate.js";
+import "dotenv/config";
 
 /**
  * Sends a verification code email to a user.
@@ -30,9 +31,9 @@ const sendVerificationCode = async (
         Math.floor((verificationCodeExpiresAt - Date.now()) / 60000)
       )
       .replace("[CURRENT_YEAR]", new Date().getFullYear())
-      .replace("[YOUR_WEBSITE_URL]", "http://localhost:5173/")
-      .replace("[PRIVACY_POLICY_URL]", "http://localhost:5173/privacy-policy")
-      .replace("[TERMS_OF_SERVICE_URL]", "http://localhost:5173/terms-of-service"),
+      .replace("[YOUR_WEBSITE_URL]", process.env.FRONTEND_URL)
+      .replace("[PRIVACY_POLICY_URL]", `${process.env.FRONTEND_URL}/privacy-policy"`)
+      .replace("[TERMS_OF_SERVICE_URL]", `${process.env.FRONTEND_URL}/terms-of-service`),
   };
   try {
     const info = await transporter.sendMail(mailOptions);
