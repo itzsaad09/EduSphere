@@ -107,12 +107,17 @@ npm install
 Create a .env file inside backend/:
 ``` bash
 MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=a_strong_secret_key
+SMTP_HOST = "your_smtp_host_url"
+SMTP_USER = "your_smtp_user"
+SMTP_PASS = "your_smtp_pass"
 CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
 CLOUDINARY_API_KEY=your_cloudinary_api_key
 CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-JWT_SECRET=a_strong_secret_key
-EMAIL_USER=your_email_address
-EMAIL_PASS=your_email_password
+YOUTUBE_API_KEY = "your_youtube_api_secret"
+ADMIN_EMAIL = "your_admin_email"
+ADMIN_PASS = "your_admin_pass"
+FRONTEND_URL = "your_frontend_url"
 ```
 
 Run the backend:
@@ -128,7 +133,7 @@ npm install
 
 Create a .env file inside backend/:
 ``` bash
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL="your_backend_url"
 ```
 
 Run the frontend:
@@ -144,7 +149,7 @@ npm install
 
 Create a .env file inside backend/:
 ``` bash
-VITE_BACKEND_URL=http://localhost:5000
+VITE_BACKEND_URL="your_backend_url"
 ```
 
 Run the admin dashboard:
