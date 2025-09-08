@@ -83,7 +83,7 @@ function ViewCourses({ setToken, token }) {
   };
 
   const editCourse = (id) => {
-    navigate(`/editcourse/${id}`);
+    navigate(`/update`, { state: { courseId: id } });
   };
 
   return (

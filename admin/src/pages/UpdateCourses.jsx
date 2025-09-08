@@ -1,12 +1,17 @@
-import React, { useState } from "react";
-import Sidebar from "../components/sidebar";
-import { backendUrl } from "../App";
+import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { backendUrl } from "../App";
+import Sidebar from "../components/sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload, faImage } from "@fortawesome/free-solid-svg-icons";
+import "./UpdateCourses.css";
 import "./AddCourses.css";
 
-function AddCourses({ setToken, token }) {
+const UpdateCourses = ({ setToken, token }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { courseId } = location.state || {};
   const [title, setTitle] = useState("");
   const [instructor, setInstructor] = useState("");
   const [category, setCategory] = useState("");
@@ -14,6 +19,30 @@ function AddCourses({ setToken, token }) {
   const [description, setDescription] = useState("");
   const [thumbnail, setThumbnail] = useState(null);
   const [notification, setNotification] = useState(null);
+
+  const [thumbnailUrl, setThumbnailUrl] = useState("");
+
+  useEffect(() => {
+    if (courseId) {
+      axios
+        .get(`${backendUrl}/api/courses/${courseId}`)
+        .then((res) => {
+          setTitle(res.data.title);
+          setInstructor(res.data.instructor);
+          setCategory(res.data.category);
+          setPlaylistUrl(res.data.playlistUrl);
+          setDescription(res.data.description);
+
+          console.log(res.data);
+        })
+        .catch(() => {
+          setNotification({
+            type: "error",
+            message: "Failed to load course data",
+          });
+        });
+    }
+  }, [courseId]);
 
   const showNotification = (message, type) => {
     setNotification({ message, type });
@@ -37,22 +66,17 @@ function AddCourses({ setToken, token }) {
       formData.append("description", description);
       if (thumbnail) formData.append("thumbnail", thumbnail);
 
-      const response = await axios.post(
-        backendUrl + "/api/courses/add",
+      const response = await axios.put(
+        backendUrl + `/api/courses/update/${courseId}`,
         formData,
         {
           headers: { token },
         }
       );
 
-      if (response.status === 201) {
-        showNotification("Course added successfully!", "success");
-        setTitle("");
-        setInstructor("");
-        setCategory("");
-        setPlaylistUrl("");
-        setDescription("");
-        setThumbnail(null);
+      if (response.status === 200) {
+        showNotification("Course updated successfully!", "success");
+        window.location.href = "/view";
       } else {
         showNotification("Failed to add course. Please try again.", "error");
       }
@@ -65,8 +89,8 @@ function AddCourses({ setToken, token }) {
   return (
     <>
       <Sidebar setToken={setToken} />
-      <div className="dashboardAddCourse">
-        <h1>Add Courses</h1>
+      <div className="dashboardUpdateCourse">
+        <h1>Update Course</h1>
       </div>
       <form method="post" onSubmit={onSubmit}>
         <div className="rowTwoColumns">
@@ -158,7 +182,7 @@ function AddCourses({ setToken, token }) {
             </div>
           </div>
         </div>
-        <button type="submit">Add Course</button>
+        <button type="submit">Update Course</button>
       </form>
       {notification && (
         <ul className="notifications">
@@ -226,6 +250,6 @@ function AddCourses({ setToken, token }) {
       )}
     </>
   );
-}
+};
 
-export default AddCourses;
+export default UpdateCourses;

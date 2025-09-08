@@ -19,10 +19,10 @@ router.route("/all").get(getAllCourses);
 router.route("/:id").get(getCourseById);
 
 router
-  .route("/:id/update")
+  .route("/update/:id")
   .put(upload.single("thumbnail"), adminAuth, updateCourse);
 
-router.route("/:id/delete").delete(adminAuth, deleteCourse);
+router.route("/delete/:id").delete(adminAuth, deleteCourse);
 
 router.post("/:id/fetch-playlist", fetchPlaylistVideos);
 
