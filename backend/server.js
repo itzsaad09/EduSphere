@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import "dotenv/config";
-import connectDB from "./config/mongodb.js";
+import connectDB from "./config/mongoDB.js";
 import connectCloudinary from "./config/cludinary.js";
 import registrationRoute from "./routes/registrationRoutes.js";
 import coursesRoute from "./routes/courseRoutes.js";
