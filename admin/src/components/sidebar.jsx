@@ -44,17 +44,7 @@ function sidebar({ setToken }) {
             <FontAwesomeIcon icon={faList} className="list-icon" />
           </button>
         </div>
-
-        {/* <div className="orders">
-          <button
-            className="orders-button"
-            onClick={() => (window.location.href = "/orders")}
-          >
-            Orders
-            <FontAwesomeIcon icon={faCartShopping} className="orders-icon" />
-          </button>
-        </div> */}
-
+        
         <div className="users">
           <button
             className="users-button"

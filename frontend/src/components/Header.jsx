@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
+import logo from "/src/assets/logo.png";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -45,7 +46,7 @@ function Header() {
         >
           {/* Ensure 'src/assets/logo.png' path is correct relative to your project structure */}
           <img
-            src="src/assets/logo.png"
+            src={logo}
             alt="EduSphere Logo"
             className="logo-image"
           />

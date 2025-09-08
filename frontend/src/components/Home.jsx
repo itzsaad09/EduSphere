@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Home.css";
+import HeroImg from "/src/assets/hero-img.png";
 
 function HomePage() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -54,7 +55,7 @@ function HomePage() {
         <div className="hero-image-container">
           {/* Placeholder image for a learning illustration */}
           <img
-            src="/src/assets/hero-img.png"
+            src={HeroImg}
             alt="Dynamic Learning Environment"
             className="hero-image"
             onError={(e) => {
