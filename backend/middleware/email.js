@@ -32,8 +32,8 @@ const sendVerificationCode = async (
       )
       .replace("[CURRENT_YEAR]", new Date().getFullYear())
       .replace("[YOUR_WEBSITE_URL]", process.env.FRONTEND_URL)
-      .replace("[PRIVACY_POLICY_URL]", `${process.env.FRONTEND_URL}/privacy-policy"`)
-      .replace("[TERMS_OF_SERVICE_URL]", `${process.env.FRONTEND_URL}/terms-of-service`),
+      .replace("[PRIVACY_POLICY_URL]", `${process.env.FRONTEND_URL}privacy-policy"`)
+      .replace("[TERMS_OF_SERVICE_URL]", `${process.env.FRONTEND_URL}terms-of-service`),
   };
   try {
     const info = await transporter.sendMail(mailOptions);
