@@ -25,9 +25,6 @@
     "multer-storage-cloudinary": "^4.0.0",
     "nodemailer": "^7.0.5",
     "nodemon": "^3.1.10",
-    "path": "^0.12.7",
-    "puppeteer": "^24.17.0",
-    "puppeteer-core": "^24.17.0",
     "uuid": "^11.1.0",
     "validator": "^13.15.15"
   }
