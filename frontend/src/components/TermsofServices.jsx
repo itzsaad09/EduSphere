@@ -1,5 +1,5 @@
 import React from "react";
-import "./TermsOfServices.css"; // Import page-specific styles
+import "./TermsofServices.css"; // Import page-specific styles
 
 function TermsOfServices() {
   return (
