@@ -157,6 +157,13 @@ Run the admin dashboard:
 npm run dev
 ```
 
+## Snapshots
+![Home](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost.png)<br/><br/>
+![Viral Products](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(1).png)<br/><br/>
+![New Arrivals](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(2).png)<br/><br/>
+![Checkout](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(4).png)<br/><br/>
+![Track Order](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(5).png)<br/><br/>
+
 ## License
 This project is open-source and available under the MIT License.
 
