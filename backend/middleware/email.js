@@ -58,10 +58,10 @@ const sendWelcomeEmail = async (fname, lname, email) => {
     html: welcomeEmailTemplate
       .replace("[User Name]", `${fname} ${lname}`)
       .replace("[CURRENT_YEAR]", new Date().getFullYear())
-      .replace("[EXPLORE_COURSES_URL]", "https://www.edusphere.com/courses")
-      .replace("[YOUR_WEBSITE_URL]", "http://localhost:5173/")
-      .replace("[PRIVACY_POLICY_URL]", "http://localhost:5173/privacy-policy")
-      .replace("[TERMS_OF_SERVICE_URL]", "http://localhost:5173/terms-of-service"),
+      .replace("[EXPLORE_COURSES_URL]", `${process.env.FRONTEND_URL}courses`)
+      .replace("[YOUR_WEBSITE_URL]", `${process.env.FRONTEND_URL}`)
+      .replace("[PRIVACY_POLICY_URL]", `${process.env.FRONTEND_URL}privacy-policy`)
+      .replace("[TERMS_OF_SERVICE_URL]", `${process.env.FRONTEND_URL}terms-of-service`),
   };
   try {
     const info = await transporter.sendMail(mailOptions);
