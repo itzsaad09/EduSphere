@@ -4,7 +4,7 @@
   <a href="LICENSE.md" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://tech-store-project-frontend.vercel.app/" target="_blank">
+  <a href="https://edu-sphere-frontend-eight.vercel.app/" target="_blank">
     <img alt="Visit Site" src="https://img.shields.io/badge/Visit-Store-058ad2" />
   </a>
 </p>
@@ -156,6 +156,13 @@ Run the admin dashboard:
 ``` bash
 npm run dev
 ```
+
+## Snapshots
+![Home](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost.png)<br/><br/>
+![Viral Products](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(1).png)<br/><br/>
+![New Arrivals](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(2).png)<br/><br/>
+![Checkout](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(4).png)<br/><br/>
+![Track Order](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(5).png)<br/><br/>
 
 ## License
 This project is open-source and available under the MIT License.
