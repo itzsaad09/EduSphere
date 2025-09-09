@@ -158,11 +158,14 @@ npm run dev
 ```
 
 ## Snapshots
-![Home](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost.png)<br/><br/>
-![Viral Products](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(1).png)<br/><br/>
-![New Arrivals](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(2).png)<br/><br/>
-![Checkout](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(4).png)<br/><br/>
-![Track Order](https://github.com/itzsaad09/Tech-Store-Project/blob/e6441f866536055e1d35ab3d0d5190773b60a3b6/Macbook-Air-localhost%20(5).png)<br/><br/>
+![Home](https://github.com/itzsaad09/EduSphere/blob/a50339b6fb1ad4a244c0d26a9f1032d4c7c876e7/Macbook-Air-localhost.png)<br/><br/>
+![Explore Courses](https://github.com/itzsaad09/EduSphere/blob/a50339b6fb1ad4a244c0d26a9f1032d4c7c876e7/Macbook-Air-localhost%20(1).png)<br/><br/>
+![Explore Courses 2](https://github.com/itzsaad09/EduSphere/blob/a50339b6fb1ad4a244c0d26a9f1032d4c7c876e7/Macbook-Air-localhost%20(2).png)<br/><br/>
+![Sign In](https://github.com/itzsaad09/EduSphere/blob/a50339b6fb1ad4a244c0d26a9f1032d4c7c876e7/Macbook-Air-localhost%20(4).png)<br/><br/>
+![User Dashbpoard](https://github.com/itzsaad09/EduSphere/blob/a50339b6fb1ad4a244c0d26a9f1032d4c7c876e7/Macbook-Air-localhost%20(5).png)<br/><br/>
+![Course Player](https://github.com/itzsaad09/EduSphere/blob/a50339b6fb1ad4a244c0d26a9f1032d4c7c876e7/Macbook-Air-localhost%20(6).png)<br/><br/>
+![Certificate](https://github.com/itzsaad09/EduSphere/blob/a50339b6fb1ad4a244c0d26a9f1032d4c7c876e7/Macbook-Air-localhost%20(7).png)<br/><br/>
+![Footer](https://github.com/itzsaad09/EduSphere/blob/a50339b6fb1ad4a244c0d26a9f1032d4c7c876e7/Macbook-Air-localhost%20(3).png)<br/><br/>
 
 ## License
 This project is open-source and available under the MIT License.
